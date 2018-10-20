@@ -34,7 +34,7 @@
 
 			var self = this;
 			this.bodyClickFn = function() {
-				self._closeMenu();
+                classie.add( this.menu, 'gn-open-part' );
 				this.removeEventListener( self.eventtype, self.bodyClickFn );
 			};
 		},
@@ -65,10 +65,10 @@
 			this.menu.addEventListener( this.eventtype, function(ev) { ev.stopPropagation(); } );
 		},
 		_openIconMenu : function() {
-			classie.add( this.menu, 'gn-open-part' );
+			/*classie.add( this.menu, 'gn-open-part' );*/
 		},
 		_closeIconMenu : function() {
-			classie.remove( this.menu, 'gn-open-part' );
+			/*classie.remove( this.menu, 'gn-open-part' );*/
 		},
 		_openMenu : function() {
 			if( this.isMenuOpen ) return;
