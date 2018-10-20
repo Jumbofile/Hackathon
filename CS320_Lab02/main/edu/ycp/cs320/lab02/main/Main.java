@@ -6,7 +6,7 @@ import org.eclipse.jetty.server.Server;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
-		String webappCodeBase = "./war";
+		String webappCodeBase = "CS320_Lab02/war";
 		File warFile = new File(webappCodeBase);
 		Launcher launcher = new Launcher();
 		
