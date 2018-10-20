@@ -24,7 +24,7 @@ a.btn {
   background: #81c784;
   box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
   -webkit-transition: all 0.25s 0s ease-out;
   transition: all 0.25s 0s ease-out;
 }
@@ -33,12 +33,32 @@ a.btn:active {
   background: #519657;
   box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
   -webkit-transform: translate3d(0, 1px, 0);
-          transform: translate3d(0, 1px, 0);
+  transform: translate3d(0, 1px, 0);
   -webkit-transition: all 0.025s 0s ease-out;
   transition: all 0.025s 0s ease-out;
 }
+*{padding:0;margin:0;}
+
+.float{
+  position:fixed;
+  width:50px;
+  height:50px;
+  top:4px;
+  right:5px;
+  background-color:#81c784;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:19px;
+  margin-left: 1px;
+}
+
 div.cards {
-  
+
   margin-top : 3px;
   max-width: 1800px;
   text-align: center;
@@ -50,7 +70,7 @@ div.card {
   margin: 8px;
   max-width: 300px;
   -webkit-perspective: 1000;
-          perspective: 1000;
+  perspective: 1000;
   position: relative;
   text-align: left;
   -webkit-transition: all 0.3s 0s ease-in;
@@ -88,12 +108,12 @@ div.card div.card-title a.toggle-info span {
 div.card div.card-title a.toggle-info span.left {
   right: 14px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 div.card div.card-title a.toggle-info span.right {
   left: 14px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 div.card div.card-title h2 {
   font-size: 24px;
@@ -123,9 +143,9 @@ div.card div.card-flap {
   position: absolute;
   width: 100%;
   -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   -webkit-transform: rotateX(-90deg);
-          transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 div.card div.flap1 {
   -webkit-transition: all 0.3s 0.3s ease-out;
@@ -141,17 +161,17 @@ div.cards.showing div.card {
   cursor: pointer;
   opacity: 0.6;
   -webkit-transform: scale(0.88);
-          transform: scale(0.88);
+  transform: scale(0.88);
 }
 .no-touch div.cards.showing div.card:hover {
   opacity: 0.94;
   -webkit-transform: scale(0.92);
-          transform: scale(0.92);
+  transform: scale(0.92);
 }
 div.card.show {
   opacity: 1 !important;
   -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
+  transform: scale(1) !important;
 }
 div.card.show div.card-title a.toggle-info {
   background: #ff6666 !important;
@@ -168,7 +188,7 @@ div.card.show div.card-title a.toggle-info span.right {
 div.card.show div.card-flap {
   background: #ffffff;
   -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 div.card.show div.flap1 {
   -webkit-transition: all 0.3s 0s ease-out;
