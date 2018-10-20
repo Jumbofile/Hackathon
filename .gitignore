@@ -11,6 +11,7 @@
 /war/WEB-INF/classes
 # Generated files
 .idea/**/contentModel.xml
+/.class/
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
