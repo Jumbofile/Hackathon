@@ -402,7 +402,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 		});
 	}
 
-	public ArrayList<String> getCardData(idea_id) throws SQLException { //gets all card data
+	public ArrayList<String> getCardData(int idea_id) throws SQLException { //gets all card data
 
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -420,7 +420,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			);
 
 			//Throws in the area id for sql statement
-			stmt.setString(1, area_id);
+			stmt.setInt(1, idea_id);
 
 			resultSet = stmt.executeQuery();
 
