@@ -1,13 +1,20 @@
 ----------------------------------------------------------------
+<<<<<<< HEAD
 Sat Oct 20 14:50:37 EDT 2018:
 Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-92d0-9cb1-000008fc73d0 
 on database directory D:\Hackathon\belres.db with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/D:/Hackathon/CS320_Lab02/lib/derby.jar
+=======
+Sat Oct 20 14:40:49 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-92c7-a50a-0000038d1c70 
+on database directory /Users/edwardnardo/Desktop/Hackathon/belres.db with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/edwardnardo/Desktop/Hackathon/CS320_Lab02/lib/derby.jar
+>>>>>>> ec59c930d40d8aded52b64a89e1ff74e9fa55d87
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_101-b13
-user.dir=D:\Hackathon
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
+java.runtime.version=1.8.0_181-b13
+user.dir=/Users/edwardnardo/Desktop/Hackathon
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.6
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
