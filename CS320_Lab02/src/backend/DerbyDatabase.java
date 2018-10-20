@@ -438,8 +438,36 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			DBUtil.closeQuietly(conn);
 		}
 	}
-	
-	// The main method creates the database tables and loads the initial data.
+    public void insertCardData(String name, String descs, String descl, String authorid, String image) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:derby:test.db;create=true");
+            stmt = conn.prepareStatement(
+                    "insert into idea(name, descs, descl, authorid, image)"
+                            + "values(?, ?, ?, ?, ?)"
+
+            );
+            stmt.setString(1, name);
+            stmt.setString(2, descs);
+            stmt.setString(3, descl);
+            stmt.setString(4, authorid);
+            stmt.setString(5, image);
+
+            stmt.execute();
+        }
+        catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        finally {
+            DBUtil.closeQuietly(stmt);
+            DBUtil.closeQuietly(conn);
+        }
+    }
+
+
+    // The main method creates the database tables and loads the initial data.
 	public static void main(String[] args) throws IOException {
 		System.out.println("Creating tables...");
 		DerbyDatabase db = new DerbyDatabase();
