@@ -1,6 +1,7 @@
 package backend;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 //import entity.Item;
 
@@ -11,6 +12,8 @@ public interface IDatabase {
 	boolean accountExist(String username, String password);
 	boolean registerAccount(String userName, String pass, String email, String name, String gender, String age, String location) throws SQLException;
 	void printDB(String dbName);
+	ArrayList<String> getCardData(int area_id) throws SQLException;
+
 	//ArrayList<String> getArea(String id) throws SQLException;
 	
 	//void insertPlayerLocation(String area);

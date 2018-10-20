@@ -401,6 +401,43 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			}
 		});
 	}
+
+	public ArrayList<String> getCardData(idea_id) throws SQLException { //gets all card data
+
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+
+
+		//Loads from database
+		ArrayList<String> content = new ArrayList<String>();
+		conn = DriverManager.getConnection("jdbc:derby:test.db;create=true");
+		try {
+			stmt = conn.prepareStatement(
+					"select * from idea "
+							+ "where area_id = ?"
+
+			);
+
+			//Throws in the area id for sql statement
+			stmt.setString(1, area_id);
+
+			resultSet = stmt.executeQuery();
+
+			//Turns sql result into an array list then returns it
+			while(resultSet.next()){
+				for(int i = 0; i < 7; i++){
+					content.add(resultSet.getString(i + 1));
+				}
+			}
+			return content;
+
+		} finally {
+			DBUtil.closeQuietly(resultSet);
+			DBUtil.closeQuietly(stmt);
+			DBUtil.closeQuietly(conn);
+		}
+	}
 	
 	// The main method creates the database tables and loads the initial data.
 	public static void main(String[] args) throws IOException {
