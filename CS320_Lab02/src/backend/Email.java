@@ -10,7 +10,7 @@ import javax.activation.*;
 
 
 public class Email {
-    public Email(){
+    public static void email(){
         // Recipient's email ID needs to be mentioned.
         String to = "enardo@ycp.edu";
 
