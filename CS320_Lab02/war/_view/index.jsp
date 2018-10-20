@@ -52,7 +52,7 @@
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
-				<li><a href="/index">InnoFind</a></li>
+				<li><a href="/index">Refresh</a></li>
 
 			</ul>
 			

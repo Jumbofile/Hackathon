@@ -34,23 +34,29 @@
 
 			var self = this;
 			this.bodyClickFn = function() {
-                classie.add( this.menu, 'gn-open-part' );
+				/*self._closeMenu();*/
 				this.removeEventListener( self.eventtype, self.bodyClickFn );
 			};
 		},
 		_initEvents : function() {
 			var self = this;
 
+            classie.add( this.menu, 'gn-open-part' );
+
 			if( !mobilecheck() ) {
-				this.trigger.addEventListener( 'mouseover', function(ev) { self._openIconMenu(); } );
-				this.trigger.addEventListener( 'mouseout', function(ev) { self._closeIconMenu(); } );
+				/*this.trigger.addEventListener( 'mouseover', function(ev) { self._openIconMenu(); } );
+				this.trigger.addEventListener( 'mouseout', function(ev) { self._closeIconMenu(); } );*/
 			
 				this.menu.addEventListener( 'mouseover', function(ev) {
-					self._openMenu(); 
-					document.addEventListener( self.eventtype, self.bodyClickFn ); 
+					self._openMenu();
+					document.addEventListener( self.eventtype, self.bodyClickFn );
 				} );
+                this.menu.addEventListener( 'mouseout', function(ev) {
+                    self._closeMenu();
+                    document.addEventListener( self.eventtype, self.bodyClickFn );
+                } );
 			}
-			this.trigger.addEventListener( this.eventtype, function( ev ) {
+			/*this.trigger.addEventListener( this.eventtype, function( ev ) {
 				ev.stopPropagation();
 				ev.preventDefault();
 				if( self.isMenuOpen ) {
@@ -61,14 +67,14 @@
 					self._openMenu();
 					document.addEventListener( self.eventtype, self.bodyClickFn );
 				}
-			} );
+			} );*/
 			this.menu.addEventListener( this.eventtype, function(ev) { ev.stopPropagation(); } );
 		},
 		_openIconMenu : function() {
-			/*classie.add( this.menu, 'gn-open-part' );*/
+			classie.add( this.menu, 'gn-open-part' );
 		},
 		_closeIconMenu : function() {
-			/*classie.remove( this.menu, 'gn-open-part' );*/
+			classie.remove( this.menu, 'gn-open-part' );
 		},
 		_openMenu : function() {
 			if( this.isMenuOpen ) return;
@@ -82,7 +88,7 @@
 			classie.remove( this.trigger, 'gn-selected' );
 			this.isMenuOpen = false;
 			classie.remove( this.menu, 'gn-open-all' );
-			this._closeIconMenu();
+			this._openIconMenu();
 		}
 	}
 

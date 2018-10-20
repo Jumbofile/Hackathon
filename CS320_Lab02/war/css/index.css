@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 div.content{
-	position: absolute;
-	overflow-y:auto;
-	margin-top : 60px;
-	height: 94%;
-	width : 100%;
-	z-index:0;	
+  position: absolute;
+  overflow-y:auto;
+  margin-top : 60px;
+  margin-left: 4%;
+  height: 93.2%;
+  width : 96%;
+  z-index:0;
 }
 a.btn {
   background: #81c784;
@@ -39,7 +40,7 @@ a.btn:active {
 div.cards {
   
   margin-top : 3px;
-  max-width: 1500px;
+  max-width: 1800px;
   text-align: center;
   margin: auto;
 }

@@ -85,7 +85,7 @@ body {
 }
 
 .codrops-icon:before {
-	font-family: 'codropsicons';
+/*	font-family: 'codropsicons';
 	margin: 0 4px;
 	speak: none;
 	font-style: normal;
@@ -93,7 +93,7 @@ body {
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;*/
 }
 
 .codrops-icon-drop:before {
