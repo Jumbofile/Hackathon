@@ -90,13 +90,11 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
 				stmt2.execute();
 
-				int accountID = getAccountID(userName);
+				//int accountID = getAccountID(userName);
 
-				if(accountID != -1) {
-					return true;
-				}else{
-					return false;
-				}
+
+				return true;
+
 			} else {
 				return false; // username already exists
 			}
