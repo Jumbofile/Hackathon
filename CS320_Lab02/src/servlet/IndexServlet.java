@@ -18,7 +18,7 @@ private String username = null;
 		username = (String) req.getSession().getAttribute("username"); //session stuff
 		
 		if(username == null) {
-			req.getRequestDispatcher("/login.jsp").forward(req, resp);
+			req.getRequestDispatcher("/login").forward(req, resp);
 		}
 		else {
 			
