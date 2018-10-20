@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
@@ -52,10 +53,13 @@
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
-				<li><a href="/index">Refresh</a></li>
+				<li><a href="/create"></a></li>
 
 			</ul>
-			
+
+			<a href="#" class="float">
+				<i class="fa fa-plus my-float"></i>
+			</a>
 				
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
