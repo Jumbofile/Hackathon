@@ -68,6 +68,10 @@ fabric.properties
 /bin/
 /test.db/
 /belres.db/
+<<<<<<< HEAD
 /.metadata/
 .idea/workspace.xml
 .idea/workspace.xml
+=======
+/.metadata/
+>>>>>>> parent of 7f80cd7... Merge remote-tracking branch 'origin/master'
