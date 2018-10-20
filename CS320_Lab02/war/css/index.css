@@ -39,8 +39,9 @@ a.btn:active {
 div.cards {
   
   margin-top : 3px;
-  width: auto;
+  max-width: 1500px;
   text-align: center;
+  margin: auto;
 }
 div.card {
   background: #ffffff;
