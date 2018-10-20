@@ -57,7 +57,7 @@
 
 			</ul>
 
-			<a href="#" class="float">
+			<a href="/create" class="float">
 				<i class="fa fa-plus my-float"></i>
 			</a>
 				
