@@ -22,8 +22,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 
-public class Email {
-    public static void email(){
+public class HelpEmail {
+    public static void helpEmail(){
         final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
         // Get a Properties object
         Properties props = System.getProperties();
@@ -53,7 +53,7 @@ public class Email {
             msg.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("enardo@ycp.edu",false));
             msg.setSubject("Hello");
-            msg.setContent("<h1>Thank you for registering</h1><br><h3>Lets make something together</h3>", "text/html");
+            msg.setContent("<h1>Help<h1>", "text/html");
             msg.setSentDate(new Date());
             Transport.send(msg);
             System.out.println("Message sent.");
