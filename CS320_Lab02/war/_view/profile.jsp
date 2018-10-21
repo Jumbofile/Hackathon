@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/create.css" />
+		<link rel="stylesheet" type="text/css" href="css/profile.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 		<script src="js/modernizr.custom.js"></script>
 	</head>
@@ -24,7 +24,7 @@
 					<div class = "centertext">
 					<div class="center">
 					
-					<img src="${img}" alt="Profile Pic" style="width:500px;height:500px;">
+					<img src="${img}" alt="Profile Pic" style="width:200px;height:200px;">
 					<h1>${username}</h1>
 						${email}
 					
@@ -46,10 +46,10 @@
 									<a class="gn-icon gn-icon-search"><span>Search</span></a>
 								</li>
 								<li>
-									<a class="gn-icon gn-icon-archive">Profile</a>
-							</li>
-								<li><a class="gn-icon gn-icon-cog">Settings</a></li>
-								<li><a class="gn-icon gn-icon-help">Help</a></li>
+                                    <a class="gn-icon gn-icon-archive" href="/profile">Profile</a>
+                                </li>
+                                <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+                                <li><a class="gn-icon gn-icon-help" href="/help">Help</a></li>
 								<li>
 									<!--<a class="gn-icon gn-icon-archive">Archives</a>
 									<ul class="gn-submenu">

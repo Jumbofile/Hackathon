@@ -178,7 +178,7 @@ input.gn-search:focus {
 }
 
 .no-touch .gn-menu li.gn-search-item:hover input.gn-search {
-	color: #FAFAFA
+	color: #333
 }
 
 /* placeholder */

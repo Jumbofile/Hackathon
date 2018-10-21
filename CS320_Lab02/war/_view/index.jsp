@@ -37,10 +37,10 @@
 									<a class="gn-icon gn-icon-search"><span>Search</span></a>
 								</li>
 								<li>
-									<a class="gn-icon gn-icon-archive">Profile</a>
+									<a class="gn-icon gn-icon-archive" href="/profile">Profile</a>
 							</li>
 								<li><a class="gn-icon gn-icon-cog">Settings</a></li>
-								<li><a class="gn-icon gn-icon-help">Help</a></li>
+								<li><a class="gn-icon gn-icon-help" href="/help">Help</a></li>
 								<li>
 									<!--<a class="gn-icon gn-icon-archive">Archives</a>
 									<ul class="gn-submenu">
