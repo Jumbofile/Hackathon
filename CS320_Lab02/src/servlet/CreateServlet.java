@@ -59,10 +59,10 @@ public class CreateServlet extends HttpServlet {
 			 * make this automatically login for you
 			 */
 
-			req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
 
-			System.out.println("Create Servlet: Creation success");
 
+        System.out.println("Create Servlet: Creation success");
+        req.getRequestDispatcher("/_view/re.jsp").forward(req, resp);
 		//System.out.println(first + second);
 		
 	}
