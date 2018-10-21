@@ -13,7 +13,7 @@ public interface IDatabase {
 	boolean registerAccount(String userName, String pass, String email, String name, String gender, String age, String location) throws SQLException;
 	void printDB(String dbName);
 	ArrayList<String> getCardData(int area_id) throws SQLException;
-	void insertCardData(String name, String descs, String descl, String authorid, String image);
+	void insertCardData(String name, String descs, String descl, String authorid, String image, String slack, String type);
 	ArrayList<String> getCardAccountData(String username) throws SQLException;//gets all card data
 
 		//ArrayList<String> getArea(String id) throws SQLException;

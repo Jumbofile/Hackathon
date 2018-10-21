@@ -19,11 +19,13 @@
 	<body>
 		<div class="content">
 			<div class="login">
+			
 				<h1>Create!</h1>
 				<form action="${pageContext.servletContext.contextPath}/create"
 					method="post">
 					<div class = "centertext">
 					What do you have to offer?
+					<br>
 					<div class = "center">
 						<select name="t">
 							<option value="need">I have an idea</option>
@@ -31,18 +33,26 @@
 						</select>
 					</div>
 					Name of Idea/service
-					<input type="text" name="n" required="required" "/> 
+					<br>
+					<input type="text" name="n" required="required" /> 
+					<br>
 					Sentance about your Idea/service
-					<input type="text" name="s" required="required" "/>
-					Full description of Idea/service, List required/wanted skills and other details.
-					<textarea name="l" rows="10" cols="30" required="required">
-
-					</textarea>
+					<br>
+					<input type="text" name="s" required="required" />
+					<br>
+					Full description and list required/wanted skills and other details.
+					<br>
+					<textarea name="l" rows="10" cols="30" required="required"></textarea>
+					<br>
 					Image URL
+					<br>
 					<input type="text" name="i" />
+					<br>
 					Slack Workspace URL
+					<br>
 					<input type="text" name="s" required="required" "/>
 					<button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Create</button>
+					<br>
 				</form>
 				</div>
 			</div>

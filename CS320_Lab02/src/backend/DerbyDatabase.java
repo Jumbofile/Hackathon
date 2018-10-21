@@ -78,7 +78,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			if (!resultSet.next()) { /// if username doesnt exist
 
 				stmt2 = conn.prepareStatement( // enter username
-						"insert into account(userName, password, email, name, gender, age, location)" + "values(?, ?, ?, ?, ?, ?, ?)");
+						"insert into account(userName, password, email, name, gender, age, location, profpic)" + "values(?, ?, ?, ?, ?, ?, ?, ?)");
 
 				stmt2.setString(1, userName);
 				stmt2.setString(2, pass);
@@ -87,7 +87,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 				stmt2.setString(5, gender);
 				stmt2.setString(6, age);
 				stmt2.setString(7, location);
-
+				stmt2.setString(8, "pinkPonies");
 				stmt2.execute();
 
 				//int accountID = getAccountID(userName);
@@ -374,7 +374,8 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 						"   name varchar(40),"      +
 						"   gender varchar(40),"    +
 						"   age varchar(40),"		+
-						"   location varchar(40)"  	+
+						"   location varchar(40),"  +
+						"   profpic varchar(40)"		+
 						")"
 					);	
 					stmt1.executeUpdate();
@@ -389,7 +390,9 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 							"   descl varchar(1000),"     +
 							"   authorid varchar(40),"      +
 							"   otherid varchar(40),"    +
-							"   image varchar(40)"    +
+							"   image varchar(40),"    +
+							"   slack varchar(100),"    +
+							"   type varchar(40)"    +
 							")"
 						);	
 						stmt2.executeUpdate();
@@ -439,14 +442,14 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			DBUtil.closeQuietly(conn);
 		}
 	}
-    public void insertCardData(String name, String descs, String descl, String authorid, String image) {
+    public void insertCardData(String name, String descs, String descl, String authorid, String image, String slack, String type) {
         Connection conn = null;
         PreparedStatement stmt = null;
         try {
             conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
             stmt = conn.prepareStatement(
-                    "insert into idea(name, descs, descl, authorid, image)"
-                            + "values(?, ?, ?, ?, ?)"
+                    "insert into idea(name, descs, descl, authorid, image, slack, type)"
+                            + "values(?, ?, ?, ?, ?, ?, ?)"
 
             );
             stmt.setString(1, name);
@@ -454,6 +457,8 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
             stmt.setString(3, descl);
             stmt.setString(4, authorid);
             stmt.setString(5, image);
+			stmt.setString(6, slack);
+			stmt.setString(7, type);
 
             stmt.execute();
         }
