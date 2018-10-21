@@ -390,7 +390,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 							"   descl varchar(1000),"     +
 							"   authorid varchar(40),"      +
 							"   otherid varchar(40),"    +
-							"   image varchar(40),"    +
+							"   image varchar(200),"    +
 							"   slack varchar(100),"    +
 							"   type varchar(40)"    +
 							")"
@@ -405,7 +405,25 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			}
 		});
 	}
+    public int getCardCount()throws SQLException{
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet resultSet = null;
 
+        conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
+        stmt = conn.prepareStatement(
+                "select COUNT(*) "
+                        + " from idea"
+
+        );
+
+        resultSet = stmt.executeQuery();
+        int returned = -1;
+        while(resultSet.next()) {
+            returned = Integer.parseInt(resultSet.getString(1));
+        }
+        return returned;
+    }
 	public ArrayList<String> getCardData(int idea_id) throws SQLException { //gets all card data
 
 		Connection conn = null;
@@ -419,7 +437,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 		try {
 			stmt = conn.prepareStatement(
 					"select * from idea "
-							+ "where area_id = ?"
+							+ "where idea_id = ?"
 
 			);
 
@@ -430,10 +448,12 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
 			//Turns sql result into an array list then returns it
 			while(resultSet.next()){
-				for(int i = 0; i < 7; i++){
+				for(int i = 0; i < 8; i++){
 					content.add(resultSet.getString(i + 1));
 				}
 			}
+
+
 			return content;
 
 		} finally {
