@@ -65,7 +65,7 @@ public class IndexServlet extends HttpServlet {
 							"						  </div>\r\n" +
 							"						  <div class=\"card-flap flap2\">\r\n" +
 							"							<div class=\"card-actions\">\r\n" +
-							"							  <a href=\"#\" class=\"btn\">Read more</a>\r\n" +
+							"							  <a href=\"#\" class=\"btn\">Join</a>\r\n" +
 							"							</div>\r\n" +
 							"						  </div>\r\n" +
 							"						</div>\r\n" +
