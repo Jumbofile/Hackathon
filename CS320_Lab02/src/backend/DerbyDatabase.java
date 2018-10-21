@@ -397,7 +397,8 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 					return true;
 				} finally {
 					DBUtil.closeQuietly(stmt1);
-				}
+                    DBUtil.closeQuietly(stmt2);
+                }
 			}
 		});
 	}
@@ -411,7 +412,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
 		//Loads from database
 		ArrayList<String> content = new ArrayList<String>();
-		conn = DriverManager.getConnection("jdbc:derby:test.db;create=true");
+		conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
 		try {
 			stmt = conn.prepareStatement(
 					"select * from idea "
@@ -442,7 +443,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
         Connection conn = null;
         PreparedStatement stmt = null;
         try {
-            conn = DriverManager.getConnection("jdbc:derby:test.db;create=true");
+            conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
             stmt = conn.prepareStatement(
                     "insert into idea(name, descs, descl, authorid, image)"
                             + "values(?, ?, ?, ?, ?)"
@@ -475,7 +476,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
         //Loads from database
         ArrayList<String> content = new ArrayList<String>();
-        conn = DriverManager.getConnection("jdbc:derby:test.db;create=true");
+        conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
         try {
             stmt = conn.prepareStatement(
                     "select * from account "
