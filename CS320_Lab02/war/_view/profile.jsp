@@ -66,9 +66,12 @@
 
 			</ul>
 
-			<a href="/create" class="float">
-				<i class="fa fa-plus my-float"></i>
-			</a>
+            <a href="/create" class="float">
+                <i class="fa fa-plus my-float"></i>
+            </a>
+            <a href="/index" class="float2">
+                <i class="fa fa-home my-float"></i>
+            </a>
 				
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
