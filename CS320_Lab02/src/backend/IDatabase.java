@@ -14,7 +14,9 @@ public interface IDatabase {
 	void printDB(String dbName);
 	ArrayList<String> getCardData(int area_id) throws SQLException;
 	void insertCardData(String name, String descs, String descl, String authorid, String image);
-	//ArrayList<String> getArea(String id) throws SQLException;
+	ArrayList<String> getCardAccountData(String username) throws SQLException;//gets all card data
+
+		//ArrayList<String> getArea(String id) throws SQLException;
 	
 	//void insertPlayerLocation(String area);
 	

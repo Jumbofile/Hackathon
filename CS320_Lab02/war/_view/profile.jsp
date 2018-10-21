@@ -14,7 +14,6 @@
 <!--[if gt IE 8]><!-->
 <html lang="en">
 <!--<![endif]-->
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -22,6 +21,15 @@
     <title>Profile</title>
 </head>
 <body>
-
+    <div class="para">
+        <c:out value="${loginId}" escapeXml="false"/>
+        <c:out value="${username}" escapeXml="false"/>
+        <c:out value="${password}" escapeXml="false"/>
+        <c:out value="${email}" escapeXml="false"/>
+        <c:out value="${name}" escapeXml="false"/>
+        <c:out value="${gender}" escapeXml="false"/>
+        <c:out value="${age}" escapeXml="false"/>
+        <c:out value="${location}" escapeXml="false"/>
+    </div>
 </body>
 </html>
