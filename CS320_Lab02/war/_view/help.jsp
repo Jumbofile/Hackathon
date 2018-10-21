@@ -20,7 +20,7 @@
 <div class="content">
     <div class="login">
 
-        <form action="${pageContext.servletContext.contextPath}/create"
+        <form action="${pageContext.servletContext.contextPath}/index"
               method="post">
             <div class = "centertext">
                 <body>

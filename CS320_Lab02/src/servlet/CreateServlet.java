@@ -22,7 +22,7 @@ public class CreateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("Register Servlet: doGet");
+		System.out.println("create Servlet: doGet");
 		username = (String) req.getSession().getAttribute("username"); //session stuff
 
         if(username == null) {
@@ -36,7 +36,7 @@ public class CreateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("Register Servlet: doPost");
+		System.out.println("create Servlet: doPost");
 		
 		//checks if account it a real account
 		//fake db stuff//FakeUserDB db = new FakeUserDB();
