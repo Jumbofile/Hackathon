@@ -37,7 +37,7 @@ public class HelpEmail {
         props.put("mail.store.protocol", "pop3");
         props.put("mail.transport.protocol", "smtp");
         final String username = "edward.nardo@gmail.com";//
-        final String password = "US.marines.2010";
+        final String password = "*************";
         try{
             Session session = Session.getDefaultInstance(props,
                     new Authenticator(){
