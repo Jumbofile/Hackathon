@@ -16,7 +16,7 @@
 <body>
 <h1> Having trouble? </h1>
 <p>clicking email will send an email to our wizards behind the curtain and theyll get back to you as soon as possible</p>
-<form method = "post" action="/help">
+<form method = "post" action="/help" onsubmit="alert('Email sent');">
     <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Email</button>
 </form>
 
