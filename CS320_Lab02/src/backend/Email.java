@@ -53,7 +53,7 @@ public class Email {
             msg.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("enardo@ycp.edu",false));
             msg.setSubject("Hello");
-            msg.setText("How are you");
+            msg.setContent("<h1>This is actual message</h1>", "text/html");
             msg.setSentDate(new Date());
             Transport.send(msg);
             System.out.println("Message sent.");
