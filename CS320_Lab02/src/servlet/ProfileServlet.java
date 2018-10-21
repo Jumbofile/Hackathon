@@ -33,15 +33,14 @@ public class ProfileServlet extends HttpServlet {
 
             try {
                 accountInfo = db.getCardAccountData(username);
-                req.setAttribute("loginId", accountInfo.get(0));
+                String pic = accountInfo.get(8);
+                if(pic.equals("pinkPonies")){
+                    req.setAttribute("img", "http://cnam.ca/wordpress/wp-content/uploads/2018/06/default-profile.gif");
+                }else{
+                    req.setAttribute("img", pic);
+                }
                 req.setAttribute("username", accountInfo.get(1));
-                req.setAttribute("password", accountInfo.get(2));
                 req.setAttribute("email", accountInfo.get(3));
-                req.setAttribute("name", accountInfo.get(4));
-                req.setAttribute("gender", accountInfo.get(5));
-                req.setAttribute("age", accountInfo.get(6));
-                req.setAttribute("location", accountInfo.get(7));
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }

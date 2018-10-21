@@ -387,10 +387,10 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 							"		generated always as identity (start with 1, increment by 1), " +									
 							"	name varchar(40),"  +
 							"	descs varchar(300)," +
-							"   descl varchar(1000),"     +
+							"   descl varchar(2000),"     +
 							"   authorid varchar(40),"      +
 							"   otherid varchar(40),"    +
-							"   image varchar(200),"    +
+							"   image varchar(500),"    +
 							"   slack varchar(100),"    +
 							"   type varchar(40)"    +
 							")"
@@ -518,7 +518,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
             //Turns sql result into an array list then returns it
             while(resultSet.next()){
-                for(int i = 0; i < 8; i++){
+                for(int i = 0; i < 9; i++){
                     content.add(resultSet.getString(i + 1));
                 }
             }

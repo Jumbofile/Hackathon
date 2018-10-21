@@ -24,7 +24,12 @@ public class CreateServlet extends HttpServlet {
 		
 		System.out.println("Register Servlet: doGet");
 		username = (String) req.getSession().getAttribute("username"); //session stuff
-		req.getRequestDispatcher("/_view/create.jsp").forward(req, resp);
+
+        if(username == null) {
+            req.getRequestDispatcher("/login").forward(req, resp);
+        }else{
+            req.getRequestDispatcher("/_view/create.jsp").forward(req, resp);
+        }
 	}
 	
 	@Override

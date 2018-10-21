@@ -34,7 +34,7 @@
 					</div>
 					Name of Idea/service
 					<br>
-					<input type="text" name="n" required="required" /> 
+					<input type="text" name="n" required="required" />
 					<br>
 					Sentance about your Idea/service
 					<br>

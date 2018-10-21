@@ -52,7 +52,7 @@ div.center{
 }
 textarea { 
 	width: 90%; 
-	margin: auto%;
+	margin: auto;
 	margin-bottom: 10px; 
 	background: rgba(0,0,0,0.3);
 	border: none;
@@ -71,7 +71,7 @@ textarea {
 	transition: box-shadow .5s ease;
 }
 
-input { 
+input {
 	width: 90%; 
 	margin: auto;
 	margin-bottom: 10px; 
