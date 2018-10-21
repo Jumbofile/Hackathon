@@ -442,23 +442,25 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			DBUtil.closeQuietly(conn);
 		}
 	}
-    public void insertCardData(String name, String descs, String descl, String authorid, String image, String slack, String type) {
+    public void insertCardData(String namee, String descs, String descl, String authorid, String image, String slack, String typee) {
         Connection conn = null;
         PreparedStatement stmt = null;
+        System.out.println("Name:" + namee + " \ntype:" + typee + " \ndesc:" + descs + " \ndescl:" + descl + " \nimage:" + image +" \nslack:" + slack + " \nuser:" + authorid);
         try {
             conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
             stmt = conn.prepareStatement(
-                    "insert into idea(name, descs, descl, authorid, image, slack, type)"
-                            + "values(?, ?, ?, ?, ?, ?, ?)"
+                    "insert into idea(name, descs, descl, authorid, otherid, image, slack, type)"
+                            + "values(?, ?, ?, ?, ?, ?, ?, ?)"
 
             );
-            stmt.setString(1, name);
+            stmt.setString(1, namee);
             stmt.setString(2, descs);
             stmt.setString(3, descl);
             stmt.setString(4, authorid);
-            stmt.setString(5, image);
-			stmt.setString(6, slack);
-			stmt.setString(7, type);
+            stmt.setString(5, "null");
+            stmt.setString(6, image);
+			stmt.setString(7, slack);
+			stmt.setString(8, typee);
 
             stmt.execute();
         }

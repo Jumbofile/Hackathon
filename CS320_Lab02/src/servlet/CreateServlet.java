@@ -45,7 +45,9 @@ public class CreateServlet extends HttpServlet {
 		String descl = req.getParameter("l");
 		String image = req.getParameter("i");
 		String slack = req.getParameter("s");
-		username = (String) req.getSession().getAttribute("username"); //session stuff
+
+		System.out.println("Name:" + name + " \ntype:" + type + " \ndesc:" + descs + " \ndescl:" + descl + " \nimage:" + image +" \nslack:" + slack + " \nuser:" + username);
+		//username = (String) req.getSession().getAttribute("username"); //session stuff
 		
 		//checks if account exist
 		boolean validAccount = false;
@@ -58,6 +60,7 @@ public class CreateServlet extends HttpServlet {
 			 */
 
 			req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
+
 			System.out.println("Create Servlet: Creation success");
 
 		//System.out.println(first + second);
