@@ -47,7 +47,8 @@ public class CreateServlet extends HttpServlet {
 		String name = (req.getParameter("n"));
 		String type = req.getParameter("t");
 		String descs = req.getParameter("s");
-		String descl = req.getParameter("l");
+		//String descl = req.getParameter("l");
+		String descl = "not implementeed";
 		String image = req.getParameter("i");
 		String slack = req.getParameter("s");
 

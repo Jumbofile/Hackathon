@@ -40,10 +40,10 @@
 					<br>
 					<input type="text" name="s" required="required" />
 					<br>
-					Full description and list required/wanted skills and other details.
+					<%--Full description and list required/wanted skills and other details.
 					<br>
 					<textarea name="l" rows="10" cols="30" required="required"></textarea>
-					<br>
+					<br>--%>
 					Image URL
 					<br>
 					<input type="text" name="i" />
