@@ -391,7 +391,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 							"   authorid varchar(40),"      +
 							"   otherid varchar(40),"    +
 							"   image varchar(500),"    +
-							"   slack varchar(100),"    +
+							"   slack varchar(500),"    +
 							"   type varchar(40)"    +
 							")"
 						);	
@@ -465,6 +465,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
     public void insertCardData(String namee, String descs, String descl, String authorid, String image, String slack, String typee) {
         Connection conn = null;
         PreparedStatement stmt = null;
+		ResultSet resultSet = null;
         System.out.println("Name:" + namee + " \ntype:" + typee + " \ndesc:" + descs + " \ndescl:" + descl + " \nimage:" + image +" \nslack:" + slack + " \nuser:" + authorid);
         try {
             conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
@@ -483,6 +484,28 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 			stmt.setString(8, typee);
 
             stmt.execute();
+			/*int count = getCardCount();
+			stmt = conn.prepareStatement(
+					"select idea_id from idea"
+
+			);
+			resultSet = stmt.executeQuery();
+			int id = -1;
+			while(resultSet.next()){
+				id = (resultSet.getInt(1));
+				if(id == count){
+					System.out.println("ID is correct");
+				}else{
+					stmt = conn.prepareStatement(
+							"UPDATE idea" +
+								"SET idea_id = ?" +
+								"WHERE idea_id = ?;"
+
+					);
+					stmt.setInt(1, count);
+					stmt.setInt(2, id);
+				}
+			}*/
         }
         catch (SQLException e) {
             // TODO Auto-generated catch block

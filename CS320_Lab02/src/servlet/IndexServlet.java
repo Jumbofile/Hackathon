@@ -43,10 +43,13 @@ public class IndexServlet extends HttpServlet {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    String image = accountInfo.get(6);
-                    String title = accountInfo.get(1);
-                    String name = accountInfo.get(4);
-                    String smallDesc = accountInfo.get(2);
+                    try {
+                        String image = accountInfo.get(6);
+                        String title = accountInfo.get(1);
+                        String name = accountInfo.get(4);
+                        String require = accountInfo.get(7);
+                        String smallDesc = accountInfo.get(2);
+
                     response = response + "<div class=\"card\">\r\n" +
                             "						<img src=\"" + image + "\"style=width:300px;height:200px;\">\r\n" +
                             "						<div class=\"card-title\">\r\n" +
@@ -61,7 +64,7 @@ public class IndexServlet extends HttpServlet {
                             "						</div>\r\n" +
                             "						<div class=\"card-flap flap1\">\r\n" +
                             "						  <div class=\"card-description\">\r\n" +
-                            smallDesc + "\r\n" +
+                            smallDesc  + "<br>" + "Requirements:" + require +  "\r\n" +
                             "						  </div>\r\n" +
                             "						  <div class=\"card-flap flap2\">\r\n" +
                             "							<div class=\"card-actions\">\r\n" +
@@ -70,6 +73,9 @@ public class IndexServlet extends HttpServlet {
                             "						  </div>\r\n" +
                             "						</div>\r\n" +
                             "					  </div>";
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
                 }
 
             }

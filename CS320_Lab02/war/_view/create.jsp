@@ -34,11 +34,11 @@
 					</div>
 					Name of Idea/service
 					<br>
-					<input type="text" name="n" required="required" />
+					<input type="text" name="n"  maxlength="39" required="required" />
 					<br>
 					Sentance about your Idea/service
 					<br>
-					<input type="text" name="s" required="required" />
+					<input type="text" name="s" maxlength="299" required="required" />
 					<br>
 					<%--Full description and list required/wanted skills and other details.
 					<br>
@@ -46,11 +46,11 @@
 					<br>--%>
 					Image URL
 					<br>
-					<input type="text" name="i" />
+					<input type="text" name="i" maxlength="499" required="required" />
 					<br>
-					Slack Workspace URL
+					Requirements for applicants
 					<br>
-					<input type="text" name="s" required="required" "/>
+					<input type="text" name="s" maxlength="499" required="required" />
 					<button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Create</button>
 					<br>
 				</form>

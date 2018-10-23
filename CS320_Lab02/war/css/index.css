@@ -10,7 +10,7 @@ div.content{
 }
 h1 {
     color: #fafafa;
-    text-shadow: 1px 1px 1px #111111;
+    text-shadow: 1px 1px 2px #111111;
 }
 a.btn {
     background: #4f7bab;
@@ -93,7 +93,7 @@ div.card {
     -webkit-transition: all 0.3s 0s ease-in;
     transition: all 0.3s 0s ease-in;
     z-index: 1;
-    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.50);
 }
 div.card img {
     max-width: 300px;
