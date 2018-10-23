@@ -50,7 +50,7 @@ public class CreateServlet extends HttpServlet {
 		//String descl = req.getParameter("l");
 		String descl = "not implementeed";
 		String image = req.getParameter("i");
-		String slack = req.getParameter("s");
+		String slack = req.getParameter("sk");
 
 		System.out.println("Name:" + name + " \ntype:" + type + " \ndesc:" + descs + " \ndescl:" + descl + " \nimage:" + image +" \nslack:" + slack + " \nuser:" + username);
 		//username = (String) req.getSession().getAttribute("username"); //session stuff

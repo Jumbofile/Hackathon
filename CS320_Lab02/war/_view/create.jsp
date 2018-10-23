@@ -48,9 +48,9 @@
 					<br>
 					<input type="text" name="i" maxlength="499" required="required" />
 					<br>
-					Requirements for applicants
+					Requirements/Experience
 					<br>
-					<input type="text" name="s" maxlength="499" required="required" />
+					<input type="text" name="sk" maxlength="499" required="required" />
 					<button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Create</button>
 					<br>
 				</form>
