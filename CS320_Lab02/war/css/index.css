@@ -68,6 +68,13 @@ a.btn:active {
     text-align:center;
     box-shadow: 2px 2px 3px #999;
 }
+.logo{
+    position:fixed;
+    width:auto;
+    height:50px;
+    top:4px;
+    left:70px;
+}
 
 .my-float{
     margin-top:19px;

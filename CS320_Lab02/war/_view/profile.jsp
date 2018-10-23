@@ -72,6 +72,9 @@
             <a href="/index" class="float2">
                 <i class="fa fa-home my-float"></i>
             </a>
+			<div class = "logo">
+				<img src="webresources/logo.png" alt="IdeaConnect">
+			</div>
 				
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>

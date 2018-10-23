@@ -20,6 +20,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-position: center;
 }
+.logo{
+    position:fixed;
+    width:auto;
+    height:50px;
+    top:4px;
+    left:70px;
+}
 .login { 
 	
 	background-color: #FAFAFA;

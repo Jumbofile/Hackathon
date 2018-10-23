@@ -42,6 +42,13 @@ div.content{
   width : 96%;
   z-index:0;
 }
+.logo{
+	position:fixed;
+	width:auto;
+	height:50px;
+	top:4px;
+	left:70px;
+}
 .float{
 	position:fixed;
 	width:50px;
