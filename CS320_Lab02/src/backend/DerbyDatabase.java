@@ -540,4 +540,8 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 		
 		System.out.println("Success!");
 	}
+	public static void shutDown() throws SQLException{
+	    System.out.println("Shutting down db.");
+        Connection conn = DriverManager.getConnection("jdbc:derby:belres.db;shutdown=true");
+    }
 }
