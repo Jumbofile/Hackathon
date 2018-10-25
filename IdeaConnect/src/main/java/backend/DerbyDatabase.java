@@ -26,7 +26,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 	
 	//decleration
 	/*
-	Will be replaced with H2 SOON tm
+	Will be replaced with H2 SOON 
 	 */
 	
 	static class RowList extends ArrayList<List<String>> {
