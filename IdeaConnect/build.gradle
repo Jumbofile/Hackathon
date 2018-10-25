@@ -26,5 +26,7 @@ dependencies {
     compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.4.12.v20180830'
     // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-jmx
     compile group: 'org.eclipse.jetty', name: 'jetty-jmx', version: '9.4.12.v20180830'
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.197'
 
 }
