@@ -25,6 +25,9 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 	}
 	
 	//decleration
+	/*
+	Will be replaced with H2 SOON tm
+	 */
 	
 	static class RowList extends ArrayList<List<String>> {
 		private static final long serialVersionUID = 1L;
