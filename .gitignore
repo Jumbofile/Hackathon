@@ -79,3 +79,4 @@ fabric.properties
 >>>>>>> parent of 7f80cd7... Merge remote-tracking branch 'origin/master'
 *.log
 *.class
+*.xml
