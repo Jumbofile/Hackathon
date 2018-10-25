@@ -1,13 +1,13 @@
-package edu.ycp.cs320.lab02.main;
+package main;
 
 import java.io.File;
 
 import org.eclipse.jetty.server.Server;
-import backend.DerbyDatabase;
+
 public class Main {
 	public static void main(String[] args) throws Exception {
 
-		String webappCodeBase = "CS320_Lab02/war";
+		String webappCodeBase = "IdeaConnect/war";
 		File warFile = new File(webappCodeBase);
 		Launcher launcher = new Launcher();
 		// get a server for port 8081

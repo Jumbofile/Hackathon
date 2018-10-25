@@ -5,6 +5,7 @@ import backend.DerbyDatabase;
 import backend.IDatabase;
 import org.mindrot.jbcrypt.BCrypt;
 
+import javax.servlet.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
