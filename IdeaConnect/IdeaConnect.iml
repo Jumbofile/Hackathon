@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <libelement value="jar://$MODULE_DIR$/lib/derby.jar!/" />
-    <libelement value="jar://$MODULE_DIR$/lib/derbyclient.jar!/" />
-    <libelement value="jar://$MODULE_DIR$/lib/derbynet.jar!/" />
-    <libelement value="jar://$MODULE_DIR$/lib/derbyrun.jar!/" />
-    <libelement value="jar://$MODULE_DIR$/lib/derbytools.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../CS320_Lab02/lib/derby.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../CS320_Lab02/lib/derbyclient.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../CS320_Lab02/lib/derbynet.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../CS320_Lab02/lib/derbyrun.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../CS320_Lab02/lib/derbytools.jar!/" />
     <src_description expected_position="0">
-      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
-      <src_folder value="file://$MODULE_DIR$/main" expected_position="1" />
+      <src_folder value="file://$MODULE_DIR$/../CS320_Lab02/src" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/../CS320_Lab02/main" expected_position="1" />
     </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/war/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/war" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/war/WEB-INF/classes" />
@@ -29,51 +42,40 @@
       </library>
     </orderEntry>
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="Jetty9" />
+    <orderEntry type="library" name="derbytools" level="project" />
     <orderEntry type="module-library">
-      <library name="derby.jar">
+      <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derby.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-annotations-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/annotations/asm-5.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jstl/org.apache.taglibs.taglibs-standard-impl-1.2.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jsp/org.eclipse.jetty.apache-jsp-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jstl/org.apache.taglibs.taglibs-standard-spec-1.2.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/annotations/javax.annotation-api-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-io-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-http-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jsp/org.mortbay.jasper.apache-el-8.5.9.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/annotations/asm-commons-5.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jsp/org.eclipse.jdt.core.compiler.ecj-4.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/apache-jsp/org.mortbay.jasper.apache-jsp-8.5.9.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-plus-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-jmx-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-security-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-server-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-servlet-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-util-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-webapp-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jetty-xml-9.4.3.v20170317.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/servlet-api-3.1.jar!/" />
+          <root url="file://$MODULE_DIR$/.." />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/main" />
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbyclient.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbyclient.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbynet.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbynet.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbyrun.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbyrun.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbytools.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbytools.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="asm-5.1" level="project" />
   </component>
 </module>
