@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +15,7 @@ import backend.DatabaseProvider;
 import backend.IDatabase;
 //import backend.hashSHA256;
 //import fakeDB.FakeUserDB;
-import backend.DatabaseController;
+import backend.DerbyDatabase;
 
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -36,7 +37,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		//checks if account it a real account
 		//fake db stuff//FakeUserDB db = new FakeUserDB();
-		DatabaseProvider.setInstance(new DatabaseController()); // some of this code taken from lab 06 and library example ---- CITING
+		DatabaseProvider.setInstance(new DerbyDatabase()); // some of this code taken from lab 06 and library example ---- CITING
 		IDatabase db = DatabaseProvider.getInstance();
 
 		// gets username and password

@@ -1,14 +1,17 @@
 package servlet;
 
 import backend.DatabaseProvider;
-import backend.DatabaseController;
+import backend.DerbyDatabase;
 import backend.IDatabase;
+import org.mindrot.jbcrypt.BCrypt;
 
+import javax.servlet.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 //import backend.hashSHA256;
 //import fakeDB.FakeUserDB;
@@ -38,7 +41,7 @@ public class CreateServlet extends HttpServlet {
 		
 		//checks if account it a real account
 		//fake db stuff//FakeUserDB db = new FakeUserDB();
-		DatabaseProvider.setInstance(new DatabaseController()); // some of this code taken from lab 06 and library example ---- CITING
+		DatabaseProvider.setInstance(new DerbyDatabase()); // some of this code taken from lab 06 and library example ---- CITING
 		IDatabase db = DatabaseProvider.getInstance();
 
 		// gets username and password

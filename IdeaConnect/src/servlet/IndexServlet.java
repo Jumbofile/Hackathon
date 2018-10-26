@@ -1,6 +1,6 @@
 package servlet;
 
-import backend.DatabaseController;
+import backend.DerbyDatabase;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class IndexServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private String username = null;
-    private DatabaseController db = new DatabaseController();
+    private DerbyDatabase db = new DerbyDatabase();
     ArrayList<String> accountInfo = new ArrayList<>();
 
     @Override

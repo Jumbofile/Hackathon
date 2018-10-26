@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //import fakeDB.FakeUserDB;
 import backend.DatabaseProvider;
-import backend.DatabaseController;
+import backend.DerbyDatabase;
 import backend.IDatabase;
 
 
@@ -33,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 		
 		//checks if account it a real account
 		//FakeUserDB db = new FakeUserDB(); fake database
-		DatabaseProvider.setInstance(new DatabaseController()); // some of this code taken from lab 06 and library example-- CITING
+		DatabaseProvider.setInstance(new DerbyDatabase()); // some of this code taken from lab 06 and library example-- CITING
 		IDatabase db = DatabaseProvider.getInstance();
 
 		

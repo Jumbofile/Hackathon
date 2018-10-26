@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="asm-5.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/annotations/asm-5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/annotations/javax.annotation-api-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/annotations/asm-commons-5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jsp/org.eclipse.jdt.core.compiler.ecj-4.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jsp/org.eclipse.jetty.apache-jsp-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jsp/org.mortbay.jasper.apache-el-8.5.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jsp/org.mortbay.jasper.apache-jsp-8.5.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jstl/org.apache.taglibs.taglibs-standard-impl-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-jstl/org.apache.taglibs.taglibs-standard-spec-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-annotations-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-http-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-io-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-jmx-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-plus-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-security-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-server-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-servlet-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-util-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-webapp-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-xml-9.4.3.v20170317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/activation.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

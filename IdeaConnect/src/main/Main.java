@@ -7,7 +7,7 @@ import org.eclipse.jetty.server.Server;
 public class Main {
 	public static void main(String[] args) throws Exception {
 
-		String webappCodeBase = "IdeaConnect/war";
+		String webappCodeBase = "war";
 		File warFile = new File(webappCodeBase);
 		Launcher launcher = new Launcher();
 		// get a server for port 8081

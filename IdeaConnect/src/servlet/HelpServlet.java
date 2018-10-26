@@ -1,7 +1,7 @@
 package servlet;
 
 import backend.DatabaseProvider;
-import backend.DatabaseController;
+import backend.DerbyDatabase;
 import backend.IDatabase;
 
 import javax.servlet.ServletException;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class HelpServlet extends HttpServlet {
@@ -26,7 +27,7 @@ public class HelpServlet extends HttpServlet {
         } else {
 
             System.out.println("Help Servlet: doGet");
-            DatabaseProvider.setInstance(new DatabaseController());
+            DatabaseProvider.setInstance(new DerbyDatabase());
             IDatabase db = DatabaseProvider.getInstance();
 
             req.getRequestDispatcher("/_view/help.jsp").forward(req, resp);
@@ -39,7 +40,7 @@ public class HelpServlet extends HttpServlet {
 
 
         System.out.println("Profile Servlet: doPost");
-        DatabaseProvider.setInstance(new DatabaseController());
+        DatabaseProvider.setInstance(new DerbyDatabase());
         IDatabase db = DatabaseProvider.getInstance();
 
         backend.HelpEmail.helpEmail();
