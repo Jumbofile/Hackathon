@@ -111,3 +111,4 @@ target/
 /idea.db/
 # End of https://www.gitignore.io/api/java,java-web,intellij
 IdeaConnect/.idea/workspace.xml
+*.db

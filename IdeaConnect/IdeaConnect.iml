@@ -29,52 +29,8 @@
       </library>
     </orderEntry>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
-      <library name="derby.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derby.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbyclient.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbyclient.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbynet.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbynet.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbyrun.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbyrun.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="derbytools.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derbytools.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="asm-5.1" level="project" />
-    <orderEntry type="library" name="h2-latest" level="project" />
+    <orderEntry type="library" name="apache-jsp" level="project" />
+    <orderEntry type="library" name="apache-jstl" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

@@ -291,7 +291,7 @@ public class DatabaseController implements IDatabase { /// most of the gamePersi
 	}
 
 	private Connection connect() throws SQLException {
-		Connection conn = DriverManager.getConnection("jdbc:h2:idea.db;create=true");
+		Connection conn = DriverManager.getConnection("jdbc:h2:./idea.db;create=true");
 		
 		// Set autocommit to false to allow execution of
 		// multiple queries/statements as part of the same transaction.
