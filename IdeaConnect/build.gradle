@@ -2,7 +2,8 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'war'
 apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
-
+apply plugin: 'application'
+mainClassName = "main.Main"
 group = 'com.ideaconnect.ideaconncet'
 version = '1.0-SNAPSHOT'
 
@@ -27,6 +28,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-jmx
     compile group: 'org.eclipse.jetty', name: 'jetty-jmx', version: '9.4.12.v20180830'
     // https://mvnrepository.com/artifact/com.h2database/h2
-    testCompile group: 'com.h2database', name: 'h2', version: '1.4.197'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.197'
 
 }
