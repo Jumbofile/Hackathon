@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +12,14 @@ import java.util.List;
 import org.mindrot.jbcrypt.BCrypt;
 
 //import gameSqldemo.SQLDemo.RowList;
-import backend.DBUtil;
 
-public class DerbyDatabase implements IDatabase { /// most of the gamePersist package taken from Lab06 ----CITING
+
+public class DatabaseController implements IDatabase { /// most of the gamePersist package taken from Lab06 ----CITING
 	static {
 		try {
-			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+			Class.forName("org.h2.Driver");
 		} catch (Exception e) {
-			throw new IllegalStateException("Could not load Derby driver");
+			throw new IllegalStateException("Could not load H2 driver");
 		}
 	}
 	
@@ -58,9 +57,6 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
                 PreparedStatement stmt = null;
                 PreparedStatement stmt2 = null;
                 ResultSet resultSet = null;
-
-
-               // conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
 
                 try {
                     // retreive username attribute from login
@@ -157,8 +153,6 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
                 int count = 0;
 
                 try {
-
-                   // conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
 
                     // retreive username attribute from login
                     stmt = conn.prepareStatement(
@@ -297,7 +291,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 	}
 
 	private Connection connect() throws SQLException {
-		Connection conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
+		Connection conn = DriverManager.getConnection("jdbc:h2:idea.db;create=true");
 		
 		// Set autocommit to false to allow execution of
 		// multiple queries/statements as part of the same transaction.
@@ -369,7 +363,6 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 					PreparedStatement stmt = null;
 					ResultSet resultSet = null;
 
-					//conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
 					stmt = conn.prepareStatement(
 							"select COUNT(*) "
 									+ " from idea"
@@ -398,7 +391,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
 				//Loads from database
 				ArrayList<String> content = new ArrayList<String>();
-				//conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
+
 				try {
 					stmt = conn.prepareStatement(
 							"select * from idea "
@@ -438,7 +431,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
                 ResultSet resultSet = null;
                 System.out.println("Name:" + namee + " \ntype:" + typee + " \ndesc:" + descs + " \ndescl:" + descl + " \nimage:" + image + " \nslack:" + slack + " \nuser:" + authorid);
                 try {
-                   // conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
+
                     stmt = conn.prepareStatement(
                             "insert into idea(name, descs, descl, authorid, otherid, image, slack, type)"
                                     + "values(?, ?, ?, ?, ?, ?, ?, ?)"
@@ -498,7 +491,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 
                 //Loads from database
                 ArrayList<String> content = new ArrayList<String>();
-                // conn = DriverManager.getConnection("jdbc:derby:belres.db;create=true");
+ 
                 try {
                     stmt = conn.prepareStatement(
                             "select * from account "
@@ -532,7 +525,7 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
     // The main method creates the database tables and loads the initial data.
 	public static void main(String[] args) throws IOException {
 		System.out.println("Creating tables...");
-		DerbyDatabase db = new DerbyDatabase();
+		DatabaseController db = new DatabaseController();
 		db.createTables();
 		
 		System.out.println("Loading initial data...");
@@ -540,8 +533,4 @@ public class DerbyDatabase implements IDatabase { /// most of the gamePersist pa
 		
 		System.out.println("Success!");
 	}
-	public static void shutDown() throws SQLException{
-	    System.out.println("Shutting down db.");
-        Connection conn = DriverManager.getConnection("jdbc:derby:belres.db;shutdown=true");
-    }
 }

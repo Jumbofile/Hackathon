@@ -1,7 +1,7 @@
 package servlet;
 
 import backend.DatabaseProvider;
-import backend.DerbyDatabase;
+import backend.DatabaseController;
 import backend.IDatabase;
 
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class ProfileServlet extends HttpServlet {
         } else {
 
             System.out.println("Profile Servlet: doGet");
-            DatabaseProvider.setInstance(new DerbyDatabase());
+            DatabaseProvider.setInstance(new DatabaseController());
             IDatabase db = DatabaseProvider.getInstance();
 
 

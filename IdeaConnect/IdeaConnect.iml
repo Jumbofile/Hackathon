@@ -75,5 +75,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="asm-5.1" level="project" />
+    <orderEntry type="library" name="h2-latest" level="project" />
   </component>
 </module>
