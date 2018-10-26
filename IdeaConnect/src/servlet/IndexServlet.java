@@ -47,6 +47,7 @@ public class IndexServlet extends HttpServlet {
                         String image = accountInfo.get(6);
                         String title = accountInfo.get(1);
                         String name = accountInfo.get(4);
+                        name = name.substring(0, 1).toUpperCase() + name.substring(1);
                         String require = accountInfo.get(7);
                         String smallDesc = accountInfo.get(2);
 
