@@ -314,10 +314,10 @@ public class DatabaseController implements IDatabase { /// most of the gamePersi
 								
 				try {
 					System.out.println("Making account table");
+
 					stmt1 = conn.prepareStatement( //creates account table
 						"create table account (" +
-						"	login_id integer primary key " +
-						"		generated always as identity (start with 1, increment by 1), " +									
+						"	login_id bigint auto_increment," +
 						"	userName varchar(40),"  +
 						"	password varchar(100)," +
 						"   email varchar(40),"     +
@@ -327,14 +327,13 @@ public class DatabaseController implements IDatabase { /// most of the gamePersi
 						"   location varchar(40),"  +
 						"   profpic varchar(40)"		+
 						")"
-					);	
+					);
 					stmt1.executeUpdate();
 					
 					System.out.println("Making idea table");
 					stmt2 = conn.prepareStatement( //creates idea table
 							"create table idea (" +
-							"	idea_id integer primary key " +
-							"		generated always as identity (start with 1, increment by 1), " +									
+							"	idea_id bigint auto_increment, " +
 							"	name varchar(40),"  +
 							"	descs varchar(300)," +
 							"   descl varchar(2000),"     +
