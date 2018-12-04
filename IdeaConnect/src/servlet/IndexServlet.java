@@ -80,6 +80,9 @@ public class IndexServlet extends HttpServlet {
                 }
 
             }
+			String usernameCap = username.substring(0, 1).toUpperCase() + username.substring(1);
+			System.out.println(usernameCap);
+			req.setAttribute("username", usernameCap);
             req.setAttribute("idea", response);
             req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
         }
@@ -96,7 +99,7 @@ public class IndexServlet extends HttpServlet {
         } else {
 
             int count = 0;
-            System.out.println("Index Servlet: doPost");
+            System.out.println("Index Servlet: doPogggst");
             try {
                 count = db.getCardCount();
             } catch (Exception e) {
@@ -144,6 +147,9 @@ public class IndexServlet extends HttpServlet {
                 }
 
             }
+            String usernameCap = username.substring(0, 1).toUpperCase() + username.substring(1);
+            System.out.println(usernameCap);
+            req.setAttribute("username", usernameCap);
             req.setAttribute("idea", response);
             req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
         }

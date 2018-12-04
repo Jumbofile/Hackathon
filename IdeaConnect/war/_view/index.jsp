@@ -91,7 +91,7 @@
 				</div>
 			</div>
 			<div class="username">
-				USERNAME
+				${username}
 			</div>
 				
 		</div><!-- /container -->
